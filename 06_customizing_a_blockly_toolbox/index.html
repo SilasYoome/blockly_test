@@ -7,6 +7,7 @@
    <script src="https://unpkg.com/blockly/blockly.min.js"></script>
    <script src="index.js"></script>
    <script src="custom_category.js"></script>
+   <script src="toolbox_label.js"></script>
    <link rel="stylesheet" href="toolbox_style.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
@@ -42,6 +43,7 @@
 
    <!-- Toolbox Definition -->
    <xml xmlns="https://developers.google.com/blockly/xml" id="toolbox-categories" style="display: none">
+      <toolboxlabel name="Custom Toolbox" colour="darkslategrey" css-label="cusstomLabel"></toolboxlabel>
       <category css-icon="customIcon fa fa-cog" name="Logic" categorystyle="logic_category">
          <block type="controls_if"></block>
          <block type="logic_compare"></block>

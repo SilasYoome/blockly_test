@@ -35,3 +35,7 @@
 .blocklyTreeRow {
    height: initial;
 }
+
+.customLabel {
+   font-weight: bold;
+}

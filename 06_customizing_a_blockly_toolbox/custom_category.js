@@ -59,8 +59,8 @@ class CustomCategory extends Blockly.ToolboxCategory {
       const img = document.createElement('img');
       img.src = './logo_only.svg';
       img.alt = 'Lamp';
-      img.width = '15';
-      img.height = '15';
+      img.width = '25';
+      img.height = '25';
       return img;
    }
 }

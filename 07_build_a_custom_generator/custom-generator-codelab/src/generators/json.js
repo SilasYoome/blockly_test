@@ -1,5 +1,5 @@
 import * as Blockly from 'blockly';
-export const javascriptGenerator = new Blockly.Generator('JSON');
+export const jsonGenerator = new Blockly.Generator('JSON');
 
 const Order = {
    ATOMIC: 0,
@@ -23,4 +23,11 @@ jsonGenerator.forBlock['math_number'] = function(block) {
 jsonGenerator.forBlock['logic_boolean'] = function(block) {
    const code = (block.getFieldValue('BOOL') === 'TRUE') ? 'true' : 'false';
    return [code, Order.ATOMIC];
+}
+
+jsonGenerator.forBlock['member'] = function (block, generator) {
+   const name = block.getFieldValue('MEMBER_NAME');
+   const value = generator.valueToCode(block, 'MEMBER_VALUE' , Order.ATOMIC);
+   const code = `"${name}": ${value}`;
+   return code;
 }
